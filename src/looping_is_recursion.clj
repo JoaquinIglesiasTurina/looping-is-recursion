@@ -19,10 +19,6 @@
         (or (empty? seq1) (empty? seq2)) false
         (= (first seq1) (first seq2)) (recur (rest seq1) (rest seq2))
         :else false))
-(println (seq= [1 2 4] '(1 2 4)))              ;=> true
-(println (seq= [1 2 3] [1 2 3 4]))                    ;=> false
-(println (seq= [1 3 5] [1 3 5 nil]))                                  ;=> false
-
 
 (defn find-first-index [pred a-seq]
   (loop [k 0
